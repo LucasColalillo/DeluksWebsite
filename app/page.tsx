@@ -34,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: seoData.fields.title,
     description: seoData.fields.description,
     openGraph: {
-      url: 'https://sukraxia.com/',
+      url: 'https://deluksDesign.com/',
       title: seoData.fields.ogTitle,
         description: seoData.fields.description,
         images: [
@@ -49,12 +49,11 @@ export default async function Home() {
 
       const res = await contentfulGQLClient.query({ query: homepageQuery });
       const { data } = await res.json() as {data: {page: IPage}};
-
   return (  
     <>    
     <main>
-    {data.page.componentsCollection.items.map((component) => {
-          const contentType = component.__typename;
+    {data?.page.componentsCollection.items.map((component) => {
+          const contentType = component?.__typename;
 
           switch (contentType) {
             case 'UiHero':

@@ -1,5 +1,6 @@
 'use client'
 
+;
 import { IUiQa } from '@/utils/graphqlInterface';
 import React, { useState } from 'react';
 

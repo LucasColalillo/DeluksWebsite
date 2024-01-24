@@ -1,6 +1,6 @@
 export const footerQuery = `
 query Layout {
-  header(id: "4qcTRXZOqhIJrsIsekGI6n"){
+  header(id: "7CSBvneKAGEnCLdtIlWNfP"){
     logo{
       description
       url
@@ -16,7 +16,7 @@ query Layout {
       value
     }
   }
-    footer (id: "6e8QVDcc1qGM7zoaeuGcb3"){
+    footer (id: "5nT0Mkos87DTWxFCViRgKh"){
       title
       description
       socialLinksCollection(limit: 5){

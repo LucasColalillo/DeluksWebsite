@@ -15,9 +15,9 @@ export default function UiHeader(props: {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-[#240131]">
+    <header className="bg-[#f5f2ea]">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1 h-24 items-center">
+        <div className="flex lg:flex-1 h-10 items-center">
           {/* <a href="#" className="-m-1.5 p-1.5"> */}
           <Link href='/'>
             <img className="h-12 w-auto" src={props.data.logo.url} alt={props.data.logo.description} />
@@ -37,7 +37,7 @@ export default function UiHeader(props: {
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           {props.data.linksCollection.items.map((link, idx) => {
             return (
-              <Link key={idx} href={link.value} className="text-sm font-semibold leading-6 text-white">
+              <Link key={idx} href={link.value} className="text-base font-semibold leading-6 text-[#e75d50]">
                 {link.text}
               </Link>
               )
@@ -48,7 +48,7 @@ export default function UiHeader(props: {
           </Link> */}
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a target='_blank' href={props.data.callToAction.value} className="text-sm font-semibold leading-6 text-white">
+          <a target='_blank' href={props.data.callToAction.value} className="text-base font-semibold leading-6 text-[#e75d50]">
             {props.data.callToAction.text}
           </a>
         </div>

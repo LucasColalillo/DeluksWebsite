@@ -7,29 +7,27 @@ export default function UiHero(props:{
     data: IUiHero
 }) {
     return (
-      <div className="bg-[#240131] overflow-hidden relative">
-
-      
+    <div className="bg-[#f5f2ea] overflow-hidden relative h-screen pt-8">    
 <div className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 flex-col lg:flex-row ">
     <div className="py-12 lg:py-16 z-20 text-center lg:text-start">
-        <div className="mb-2 font-semibold	text-lg text-[#8C52FF]">
+        <div className="mb-2 font-semibold	text-xl text-[#e75d50]">
         {props.data.label}
         </div>
-        <h2 className="text-4xl font-extrabold text-white sm:text-5xl">
+        <h2 className="text-4xl font-extrabold text-[#282c37] sm:text-6xl">
         <span className="block">
             {props.data.title}
             </span>
-            <span className="block text-white">
+            <span className="block text-[#282c37]">
             {props.data.titleDown}
             </span>
         </h2>
-        <p className="text-base mt-4 text-[#C5B5E6]" style={{maxWidth: "33rem"}}>
+        <p className="text-base mt-4 text-[#e75d50]" style={{maxWidth: "33rem"}}>
         {props.data.description}
         </p>
         <div className="lg:mt-0 lg:flex-shrink-0">
-            <div className="mt-6 inline-flex rounded-xl shadow">
+            <div className="mt-6 inline-flex rounded-xl border border-[#e75d50]">
                 <Link target="_blank" href={props.data.link.value} passHref>
-                <button type="button" className="py-3 px-4  bg-[#8C52FF] hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-xl">
+                <button type="button" className="py-3 px-4  bg-[#f5f2ea] hover:bg-[#e75d50] text-[#e75d50] hover:text-[#f5f2ea] w-full transition ease-in duration-200 text-center text-base font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-xl">
                     {props.data.link.text}
                 </button>
                 </Link>      

@@ -20,6 +20,7 @@ export default function UiFooter(props: {
     // Limpia el intervalo cuando el componente se desmonta
     return () => clearInterval(intervalId);
   }, []);
+
   return (
     <footer className="relative bg-[#240131] pt-8 pb-6">
   <div className="mx-auto flex max-w-7xl  justify-between p-6 lg:px-8 flex-col">
@@ -72,10 +73,10 @@ export default function UiFooter(props: {
                 <a className="text-[#C5B5E6] hover:text-white  block pb-2 text-sm" href="https://creative-tim.com/terms?ref=njs-profile">Terms &amp; Conditions</a>
               </li> */}
               <li>
-                <a className="text-[#C5B5E6] hover:text-white  block pb-2 text-sm" href={props.data.menuCollection.items[0].linksCollection.items[1].value}>{props.data.menuCollection.items[1].linksCollection.items[0].text}</a>
+                <a className="text-[#C5B5E6] hover:text-white  block pb-2 text-sm" href={props.data.menuCollection.items[1]?.linksCollection.items[0]?.value}>{props.data.menuCollection.items[1].linksCollection.items[0]?.text}</a>
               </li>
               <li>
-                <a className="text-[#C5B5E6] hover:text-white  block pb-2 text-sm" target="_blank" href={props.data.menuCollection.items[1].linksCollection.items[1].value}>{props.data.menuCollection.items[1].linksCollection.items[1].text}</a>
+                <a className="text-[#C5B5E6] hover:text-white  block pb-2 text-sm" target="_blank" href={props.data.menuCollection.items[1]?.linksCollection.items[1]?.value}>{props.data.menuCollection.items[1]?.linksCollection.items[1]?.text}</a>
               </li>
             </ul>
           </div>
@@ -87,7 +88,7 @@ export default function UiFooter(props: {
       <div className="w-full md:w-4/12 px-4 mx-auto text-center">
         <div className="text-sm text-[#C5B5E6] font-semibold py-1">
           Copyright © <span id="get-current-year">{currentYear}</span>
-          <span className="font-bold"> Sukraxia</span> 
+          <span className="font-bold"> Deluks Design</span> 
         </div>
       </div>
     </div>

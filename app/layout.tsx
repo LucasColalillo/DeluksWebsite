@@ -19,7 +19,6 @@ export default async function RootLayout({
 
   const resFooter = await contentfulGQLClient.query({ query: footerQuery });
   const { data } = await resFooter.json() as {data: {header: IHeader, footer: IFooter}};
-
   return (
     <html lang="en">
       <body className={inter.className}>
