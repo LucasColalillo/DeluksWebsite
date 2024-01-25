@@ -49,12 +49,12 @@ const CardSliderItems = [
 ];
 
 const Ui_cardSilder = () => (
-  <div id='testimonials' className="bg-[#240131] relative">
+  <div id='testimonials' className="bg-[#f5f2ea] relative">
 
       
 <div className="mx-auto flex max-w-7xl justify-between p-6 lg:px-8 flex-col ">
 
-  <div className='bg-[#240131] py-40 '>
+  <div className='bg-[#f5f2ea] py-40 '>
     <div className='flex justify-center items-center mb-8'>
         <p className='text-3xl md:text-5xl font-extrabold text-white mb-12'>Casos de exito.</p>
         </div>

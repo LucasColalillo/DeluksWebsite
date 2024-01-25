@@ -3,6 +3,7 @@
 import { IUiServices } from '@/utils/graphqlInterface';
 import Link from 'next/link';
 import React, { useState, useEffect, useRef } from 'react';
+import Marquee from 'react-fast-marquee';
 
 export function UiVerticalSlider(props: {
   data: IUiServices
@@ -32,8 +33,15 @@ export function UiVerticalSlider(props: {
       };
 
   return (
-    <div id='services' className="bg-[#f5f2ea] relative">
-      <div className='text-3xl sm:text-5xl text-black flex justify-center font-extrabold pt-12'>{props.data.title}</div>
+    <div id='services' className="bg-[#f5f2ea] relative pt-20">
+       <div className=' bg-[#e75d50] h-20 flex items-center justify-center text-center'>
+        <Marquee direction="right" speed={100} autoFill>
+          <div className="mx-5 text-3xl text-white">
+            <p>Deluks Design</p>
+            </div>
+        </Marquee>
+      </div>
+      <div className='text-3xl sm:text-5xl text-black flex justify-center font-extrabold pt-32'>{props.data.title}</div>
         <div className="mx-auto flex flex-col md:flex-row max-w-7xl  p-6 pb-0 lg:px-8 relative">
       <div className=' md:sticky top-0 left-0 w-full md:w-2/4 md:h-screen overflow-auto my-6 md:my-0 hidden md:flex flex-col items-center md:items-start justify-center '>
       {props.data.servicesCollection.items.map(tab => (
@@ -69,13 +77,16 @@ export function UiVerticalSlider(props: {
       </div>
     </div>
     <div>
-    <div className="pb-12 flex justify-center rounded-xl shadow">
-                <Link target="_blank" href={props.data.callToAction?.value as string} passHref>
-                <button type="button" className="py-3 px-4  bg-[#8C52FF] hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-xl">
-                    {props.data.callToAction?.text}
+    <div className="pb-12 flex justify-center rounded-xl">
+                <div className="mt-6 inline-flex rounded-xl border border-[#e75d50]">
+                <Link target="_blank" href={props.data.callToAction?.value as string}  passHref>
+                <button type="button" className="py-3 px-4  bg-[#f5f2ea] hover:bg-[#e75d50] text-[#e75d50] hover:text-[#f5f2ea] w-full transition ease-in duration-200 text-center text-base font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-xl">
+                {props.data.callToAction?.text}
                 </button>
                 </Link>      
+            </div>   
             </div>
+            
     </div>
     </div>
   );

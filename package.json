@@ -18,8 +18,10 @@
     "next": "13.4.19",
     "react": "^18",
     "react-dom": "^18",
+    "react-fast-marquee": "^1.6.3",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.29.0",
+    "react-spring": "^9.7.3",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.0.4",
     "tw-elements-react": "^1.0.0-alpha2"

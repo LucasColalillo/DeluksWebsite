@@ -13,7 +13,7 @@ title: string, description: string, txt: string, image: string, link: string
 }) => {
   
   const content = (
-    <div className="block w-[300px] lg:w-[350px] px-8 p-6 bg-[#251446] hover:bg-[#2e165d] transition ease-in duration-200 rounded-lg shadow h-[400px]">
+    <div className="block w-[300px] lg:w-[350px] px-8 p-6 bg-[#f5f2ea] hover:bg-[#2e165d] transition ease-in duration-200 rounded-lg shadow h-[400px]">
       <div className='flex justify-center'>
         <img src={image} alt={title} className="mb-4 object-contain w-24 h-24 mt-8" />
       </div>

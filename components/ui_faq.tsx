@@ -12,7 +12,7 @@ import React, { useState } from 'react';
     };
   
   return (
-    <li className="bg-[#251446] text-white my-4 mx-3 shadow-lg rounded-2xl">
+    <li className="bg-[#493f3f] text-[#f5f2ea] my-4 mx-3 shadow-lg rounded-2xl">
       <h2
         className="px-4 flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
         onClick={toggleAccordion}
@@ -29,7 +29,7 @@ import React, { useState } from 'react';
         className=" overflow-hidden max-h-0 transition-max-h duration-400 ease-in-out"
         style={{ maxHeight: isOpen ? '1000px' : '0' }}
       >
-        <p className="p-3 rounded-b-xl text-[#dfd7ef] bg-[#2f1b57]">{answer}</p>
+        <p className="p-3 rounded-b-xl text-[#f5f2ea] bg-[#493f3f]">{answer}</p>
       </div>
     </li>
   );
@@ -40,12 +40,12 @@ const Ui_faq = (props: {
 }) => {
   return (
     <>
-      <div id='preguntas-frecuentes'>
-        <div className="bg-[#240131]">
+      <div id='preguntas-frecuentes' className='bg-[#f5f2ea]'>
+        <div className="bg-[#f5f2ea]">
           <main className="p-5 bg-light-blue">
             <div className="flex justify-center items-start my-2">
               <div className="w-full sm:w-10/12 md:w-1/2 my-1 flex flex-col items-center justify-center">
-              <div className='text-5xl text-white flex justify-center font-bold py-12'>
+              <div className='text-5xl text-[#e75d50] flex justify-center font-bold py-12'>
               {props.data.title}</div>
                 <ul className="flex flex-col">
                   {
